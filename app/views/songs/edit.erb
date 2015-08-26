@@ -1,6 +1,3 @@
-
-
-
 <div class='container' style="padding-top: 20px;">
   <div class='row'>
     <div class='span8'>
@@ -9,40 +6,18 @@
           <%= @song.title %>
         </h1>
       </div>
-      <table class='table table-striped'>
         <form action="/songs/<%= @song.id %>" method="post">
           <input type="hidden" name="_method" value="patch">
-        <tr>
-          <td>Title</td>
-          <td>
-            <input id="title" type="text" name="song[title]" value="<%= @song.title %>">
-          </td>
-        </tr>
-        <tr>
-          <td>Artist</td>
-          <td>
-            <input id="artist" type="text" name="song[artist]" value="<%= @song.artist %>">
-          </td>
-        </tr>
-        <tr>
-          <td>Album</td>
-          <td>
-            <input id="album" type="text" name="song[album]" value="<%= @song.album %>">
-          </td>
-        </tr>
-        <tr>
-          <td>Genre</td>
-          <td>
-            <input id="genre" type="text" name="song[genre]" value="<%= @song.genre %>">
-          </td>
-        </tr>
-        <tr>
-          <td>Length</td>
-          <td>
-            <input id="length" type="text" name="song[length]" value="<%= @song.length %>">
-          </td>
-        </tr>
-      </table>
+          <label for="title">Title</label>
+          <input id="title" type="text" name="song[title]" value="<%= @song.title %>">
+          <label for="label">Artist</label>
+          <input id="artist" type="text" name="song[artist]" value="<%= @song.artist %>">
+          <label for="album">Album</label>
+          <input id="album" type="text" name="song[album]" value="<%= @song.album %>">
+          <label for="genre">Genre</label>
+          <input id="genre" type="text" name="song[genre]" value="<%= @song.genre %>">
+          <label for="length">Length</label>
+          <input id="length" type="text" name="song[length]" value="<%= @song.length %>">
       <input type="submit" value="Save Changes">
     </div>
   </div>
