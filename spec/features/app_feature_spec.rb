@@ -1,3 +1,4 @@
+require 'pry'
 describe "edits a song", :type => :feature do
   before :each do
     Song.create({
